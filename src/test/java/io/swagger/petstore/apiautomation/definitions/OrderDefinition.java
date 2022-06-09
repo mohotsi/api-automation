@@ -18,7 +18,7 @@ import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.equalTo;
 import static org.testng.AssertJUnit.assertEquals;
 
-public class PetDefinition {
+public class OrderDefinition {
 
    @Autowired
     RestAPIClient getPet;
@@ -54,9 +54,7 @@ public class PetDefinition {
             val url = endpoint.replace("{orderId}", clientPlaceAnOrderResponse.getId().toString());
        val response=getOrder.get(url);
             assertEquals("the end point "+endpoint+" should return 200 code",200, response.getStatusCode());
-            val actual=response.andReturn().as(Order.class);
-            val expected=clientPlaceAnOrderResponse;
-            int i=0;
+
             assertThat("the end point "+endpoint+" should return the order which was added", response.andReturn().as(Order.class)
                     ,equalTo(clientPlaceAnOrderResponse) );
         }
