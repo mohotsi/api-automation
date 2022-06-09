@@ -1,4 +1,4 @@
-package model.pet;
+package io.swagger.petstore.apiautomation.model.pet;
 
 
 import java.util.List;

@@ -1,10 +1,8 @@
-package model.order;
+package io.swagger.petstore.apiautomation.model.order;
 
 import lombok.val;
 
-import java.text.SimpleDateFormat;
 import java.time.LocalDateTime;
-import java.util.Date;
 
 public class Order {
     private  Long id;

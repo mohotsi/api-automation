@@ -6,8 +6,8 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.swagger.petstore.apiautomation.util.RestAPIClient;
 import lombok.val;
-import model.order.Order;
-import model.pet.Pet;
+import io.swagger.petstore.apiautomation.model.order.Order;
+import io.swagger.petstore.apiautomation.model.pet.Pet;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import java.util.Arrays;

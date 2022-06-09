@@ -14,7 +14,6 @@ import static io.restassured.RestAssured.given;
 @Service
 public class RestAPIClient {
 
-
     @Value("${base.uri:https://petstore.swagger.io/v2}")
     private String baseUri;
     public RequestSpecification requestSpecification() {
