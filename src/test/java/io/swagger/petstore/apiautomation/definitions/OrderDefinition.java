@@ -38,7 +38,8 @@ public class OrderDefinition {
                         .get("pet/findByStatus").andReturn().as(Pet[].class))
                 .filter(pet->pet.getStatus().equalsIgnoreCase(status)).collect(Collectors.toList());
         val petNames=pets.stream().map(Pet::getName).collect(Collectors.toList());
-        val petId=petNames.stream().filter(name->pets.stream().collect(Collectors.groupingBy(Pet::getName)).get(name).size()>=1)
+        val petId=petNames.stream().filter(name->pets.stream().collect(Collectors.groupingBy(Pet::getName)).
+                        get(name).size()>=Integer.parseInt(data.get("quantity")))
                 .map(name->pets.stream().collect(Collectors.groupingBy(Pet::getName)).get(name))
                 .flatMap(List::stream)
                 .collect(Collectors.toList()).stream().map(Pet::getId).findFirst().orElseGet(null);
