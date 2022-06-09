@@ -9,5 +9,5 @@ Feature: Store Order
     Then Client should be able to a get the order using end point "store/order/{orderId}"
     Examples:
       | complete |
-      | true     |d
+      | true     |
       | false    |
